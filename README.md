@@ -2,7 +2,7 @@
 
 Public website, documentation, privacy notice and terms for the independent Nytrix launcher.
 
-- Live on Cloudflare: https://nytrix.fangiodehullu.workers.dev
+- Live on Cloudflare: https://nytrix.pages.dev
 - GitHub Pages mirror: https://fangioproyt.github.io/nytrix-website/
 - Launcher and corresponding source: https://github.com/FangioproYT/nytrix-website/releases/tag/launcher-v0.1.0
 
@@ -27,8 +27,10 @@ Edit content in `src/content.mjs`, presentation in `scripts/build.mjs` and
 ## Publishing
 
 - GitHub Pages builds `main` using `.github/workflows/pages.yml`.
-- Cloudflare serves the same generated pages through the small ES module
-  `dist/worker.mjs`, without a database, account backend or external fonts.
+- Cloudflare Pages serves the generated static pages without a database, account
+  backend or external fonts. Its native GitHub integration builds `main` with
+  `npm run build && npm test && node scripts/prepare-pages.mjs`.
+- The earlier Workers deployment remains available as an additional mirror.
 - Native Cloudflare Workers Builds should connect this repository's `main` branch,
   run `npm run build && npm test`, then `npm run deploy:cloudflare`.
 - The deploy script reads `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` from

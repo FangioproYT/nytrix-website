@@ -1,13 +1,13 @@
 {
-  "name":"Nytrix",
-  "operator":"Nytrix",
-  "maintainer":"FangioproYT",
-  "contactEmail":"",
-  "canonicalUrl":"https://nytrix.fangiodehullu.workers.dev",
-  "repository":"https://github.com/FangioproYT/nytrix-website",
-  "version":"0.1.0",
-  "updated":"2026-11-22",
-  "downloadUrl":"https://github.com/FangioproYT/nytrix-website/releases/download/launcher-v0.1.0/Nytrix_0.1.0_x64-setup.exe",
-  "sourceUrl":"https://github.com/FangioproYT/nytrix-website/releases/download/launcher-v0.1.0/Nytrix-0.1.0-source.zip",
-  "sha256":"97bbad94cdf2288bd94a25ef75062e7cfa47f982a0f034a392e589389e440b4f"
+  "name": "Nytrix",
+  "operator": "Nytrix",
+  "maintainer": "FangioproYT",
+  "contactEmail": "",
+  "canonicalUrl": "https://nytrix.pages.dev",
+  "repository": "https://github.com/FangioproYT/nytrix-website",
+  "version": "0.1.0",
+  "updated": "2026-11-22",
+  "downloadUrl": "https://github.com/FangioproYT/nytrix-website/releases/download/launcher-v0.1.0/Nytrix_0.1.0_x64-setup.exe",
+  "sourceUrl": "https://github.com/FangioproYT/nytrix-website/releases/download/launcher-v0.1.0/Nytrix-0.1.0-source.zip",
+  "sha256": "97bbad94cdf2288bd94a25ef75062e7cfa47f982a0f034a392e589389e440b4f"
 }
