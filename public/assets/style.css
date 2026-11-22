@@ -12,3 +12,9 @@ body{background:radial-gradient(ellipse 60% 550px at 80% 150px,#602cb012,transpa
 
 /* Keep decorative orbit strokes inside the page on narrow screens. */
 .nx-hero{overflow:clip}
+
+/* User-supplied Nytrix Client artwork, kept in its original colors. */
+.brand img,.nx-window-brand img{filter:none;object-fit:contain;border-radius:6px;background:#03030d}
+.brand img{width:46px;height:46px}.nx-window-brand img{width:28px;height:28px}.nx-window-scene{height:350px;background:#03030d}.nx-window-scene>img.nx-official-logo{object-fit:contain;filter:none;width:100%;height:100%}.nx-window-scene:after{display:none}.nx-client-window{background:#080811}.nx-floating-tag{bottom:20px}.nx-hero h1 em{background:linear-gradient(100deg,#bd9bff,#81baff);background-clip:text;-webkit-text-fill-color:transparent}.download-logo img{object-fit:contain;background:#03030d;border-radius:10px}.nx-window-brand span{font-size:.625rem}
+@media(max-width:1100px){.nx-window-scene{height:320px}}
+@media(max-width:760px){.brand img{width:38px;height:38px}.nx-window-scene{height:310px}.nx-hero h1{font-size:clamp(2.5rem,9vw,3.9rem)}.nx-window-brand img{width:24px;height:24px}}

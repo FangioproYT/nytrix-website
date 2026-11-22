@@ -18,6 +18,6 @@ export default {
     const status=file?200:404;file??=FILES['/404.html'];
     const headers={...SECURITY_HEADERS,'content-type':file.type,'cache-control':file.type.startsWith('text/html')?'public, max-age=300':'public, max-age=3600',etag:file.etag};
     if(status===200&&request.headers.get('if-none-match')===file.etag)return new Response(null,{status:304,headers});
-    return new Response(request.method==='HEAD'?null:file.body,{status,headers});
+    return new Response(request.method==='HEAD'?null:(file.binary?Uint8Array.from(atob(file.body),c=>c.charCodeAt(0)):file.body),{status,headers});
   }
 };
