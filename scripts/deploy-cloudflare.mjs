@@ -1,0 +1,10 @@
+import {readFile} from 'node:fs/promises';
+const metadata=JSON.parse(await readFile(new URL('../cloudflare.deploy.json',import.meta.url),'utf8'));
+const token=process.env.CLOUDFLARE_API_TOKEN;
+const account=process.env.CLOUDFLARE_ACCOUNT_ID;
+if(!token||!account)throw new Error('Cloudflare build credentials are missing. Configure a native Workers Builds deploy token.');
+const code=await readFile(new URL('../'+metadata.main,import.meta.url),'utf8');
+const form=new FormData();form.append('metadata',new Blob([JSON.stringify({main_module:'worker.mjs',compatibility_date:metadata.compatibility_date,observability:metadata.observability})],{type:'application/json'}));form.append('worker.mjs',new Blob([code],{type:'application/javascript+module'}),'worker.mjs');
+const response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${account}/workers/scripts/${metadata.name}`,{method:'PUT',headers:{authorization:`Bearer ${token}`},body:form});
+const result=await response.json();if(!response.ok||!result.success)throw new Error(`Cloudflare deployment failed (HTTP ${response.status}): ${JSON.stringify(result.errors)}`);
+console.log(`Deployed ${metadata.name}; version ${result.result?.deployment_id??'published'}`);

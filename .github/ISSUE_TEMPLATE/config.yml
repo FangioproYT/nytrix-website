@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Nytrix documentation
+    url: https://nytrix.fangiodehullu.workers.dev/docs/
+    about: Installation, account setup, mods and troubleshooting.
