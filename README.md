@@ -2,6 +2,13 @@
 
 Public website, documentation, privacy notice and terms for the independent Nytrix launcher.
 
+- Live on Cloudflare: https://nytrix.fangiodehullu.workers.dev
+- GitHub Pages mirror: https://fangioproyt.github.io/nytrix-website/
+- Launcher and corresponding source: https://github.com/FangioproYT/nytrix-website/releases/tag/launcher-v0.1.0
+
+The native Cloudflare repository connection is enabled for `main`. A production
+build and deployment from this GitHub repository completed successfully.
+
 ## Development
 
 Requires Node.js 22 or newer. There are no third-party runtime or build dependencies.
